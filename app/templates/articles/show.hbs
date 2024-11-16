@@ -1,0 +1,90 @@
+<div class="container mx-auto px-4 py-8">
+  {{! Навигация }}
+  <nav class="mb-8">
+    <LinkTo
+      @route="articles"
+      class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200 flex items-center gap-2"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+          clip-rule="evenodd"
+        />
+      </svg>
+      Назад к списку
+    </LinkTo>
+  </nav>
+
+  <article
+    class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto"
+  >
+    <div class="p-8">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+        {{@model.title}}
+      </h1>
+
+      <div class="flex flex-wrap gap-4 mb-8 text-sm">
+        <span
+          class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full"
+        >
+          {{@model.category}}
+        </span>
+        <span class="text-gray-600 dark:text-gray-400">
+          Автор:
+          {{@model.author}}
+        </span>
+        <span class="text-gray-600 dark:text-gray-400">
+          Дата:
+          {{format-date @model.publishDate}}
+        </span>
+      </div>
+
+      <div class="prose dark:prose-invert max-w-none">
+        {{! Убираем использование truncate здесь для отображения полного текста }}
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+          {{@model.content}}
+        </p>
+      </div>
+    </div>
+  </article>
+
+  {{! Кнопка "Скопировать ссылку" }}
+  <div class="mt-8 flex justify-center">
+    <button
+      type="button"
+      class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+      {{on "click" this.copyLink}}
+    >
+      <svg
+        class="-ml-1 mr-2 h-5 w-5"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path
+          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+        ></path>
+      </svg>
+      Скопировать ссылку
+    </button>
+  </div>
+
+  {{#if this.showCopyNotification}}
+    <div
+      class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg animate-fade-in-out"
+    >
+      Ссылка скопирована!
+    </div>
+  {{/if}}
+</div>

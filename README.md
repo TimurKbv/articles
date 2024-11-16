@@ -1,56 +1,60 @@
-# article-manager
+# Article Manager
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Веб-приложение для отображения и управления списком статей с возможностью поиска, фильтрации и бесконечной прокрутки.
 
-## Prerequisites
+## Основные возможности
 
-You will need the following things properly installed on your computer.
+- Просмотр списка статей с бесконечной прокруткой
+- Поиск по заголовкам и содержимому
+- Фильтрация по категориям, авторам и датам
+- Детальный просмотр статьи
+- Темная/светлая тема с автоопределением системных настроек
+- Адаптивный дизайн
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (with npm)
-- [Ember CLI](https://cli.emberjs.com/release/)
-- [Google Chrome](https://google.com/chrome/)
+## Технологии
 
-## Installation
+- Ember.js
+- Tailwind CSS
+- Docker
 
-- `git clone <repository-url>` this repository
-- `cd article-manager`
-- `npm install`
+## Запуск приложения
 
-## Running / Development
+### Разработка
 
-- `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+1. Установите зависимости:
+```bash
+npm install
+```
 
-### Code Generators
+2. Запустите сервер разработки:
+```bash
+ember serve
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
+3. Откройте http://localhost:4200
 
-### Running Tests
+### Docker
 
-- `npm run test`
-- `npm run test:ember -- --server`
+1. Соберите образ:
+```bash
+docker build -t article-manager .
+```
 
-### Linting
+2. Запустите контейнер:
+```bash
+docker run -p 80:80 article-manager
+```
 
-- `npm run lint`
-- `npm run lint:fix`
+3. Откройте http://localhost
 
-### Building
+## Тестирование
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+```bash
+ember test
+```
 
-### Deploying
+## Дополнительная информация
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-- [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
-- Development Browser Extensions
-  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- Приложение использует localStorage для сохранения настроек темы
+- Системные требования: Node.js >= 18
+- Поддерживаемые браузеры: последние версии Chrome, Firefox, Safari, Edge

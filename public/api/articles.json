@@ -1,0 +1,252 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Введение в Ember.js",
+      "content": "Ember.js - это фреймворк для создания амбициозных веб-приложений. Он предоставляет множество возможностей из коробки и следует принципу 'соглашение важнее конфигурации'. В этой статье мы рассмотрим основные концепции, компоненты, роутинг и работу с данными.",
+      "category": "Frontend",
+      "author": "Александр Иванов",
+      "publishDate": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "title": "Работа с Tailwind CSS",
+      "content": "Tailwind CSS - это утилитарный CSS-фреймворк, который позволяет быстро создавать пользовательские интерфейсы. В этой статье мы рассмотрим основные классы, настройку конфигурации и лучшие практики использования.",
+      "category": "CSS",
+      "author": "Мария Петрова",
+      "publishDate": "2024-02-01"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript асинхронность",
+      "content": "Асинхронное программирование является ключевым аспектом JavaScript. Разберем Promise, async/await, Event Loop и лучшие практики работы с асинхронным кодом.",
+      "category": "JavaScript",
+      "author": "Дмитрий Сидоров",
+      "publishDate": "2024-02-15"
+    },
+    {
+      "id": 4,
+      "title": "Основы Node.js",
+      "content": "Node.js позволяет использовать JavaScript на сервере. В статье рассмотрим основы работы с Node.js, npm, Express и базовые концепции серверной разработки.",
+      "category": "Backend",
+      "author": "Елена Козлова",
+      "publishDate": "2024-03-01"
+    },
+    {
+      "id": 5,
+      "title": "React vs Vue vs Angular",
+      "content": "Сравнительный анализ популярных frontend фреймворков. Рассмотрим их сильные и слабые стороны, экосистему и случаи использования.",
+      "category": "Frontend",
+      "author": "Павел Волков",
+      "publishDate": "2024-03-15"
+    },
+    {
+      "id": 6,
+      "title": "CSS Grid Layout",
+      "content": "CSS Grid Layout предоставляет мощный инструмент для создания сложных макетов. Разберем основные свойства, адаптивный дизайн и практические примеры.",
+      "category": "CSS",
+      "author": "Мария Петрова",
+      "publishDate": "2024-04-01"
+    },
+    {
+      "id": 7,
+      "title": "TypeScript для профессионалов",
+      "content": "Продвинутые концепции TypeScript: обобщенные типы, декораторы, утилитные типы и работа с типами высокого порядка.",
+      "category": "JavaScript",
+      "author": "Александр Иванов",
+      "publishDate": "2024-04-15"
+    },
+    {
+      "id": 8,
+      "title": "Docker в разработке",
+      "content": "Практическое использование Docker в процессе разработки. Создание образов, работа с контейнерами, docker-compose и оркестрация.",
+      "category": "DevOps",
+      "author": "Дмитрий Сидоров",
+      "publishDate": "2024-05-01"
+    },
+    {
+      "id": 9,
+      "title": "GraphQL и REST API",
+      "content": "Сравнение подходов к построению API. Преимущества и недостатки GraphQL, практические примеры реализации.",
+      "category": "Backend",
+      "author": "Елена Козлова",
+      "publishDate": "2024-05-15"
+    },
+    {
+      "id": 10,
+      "title": "Микросервисы на практике",
+      "content": "Практический опыт построения микросервисной архитектуры. Паттерны, проблемы и их решения.",
+      "category": "DevOps",
+      "author": "Павел Волков",
+      "publishDate": "2024-06-01"
+    },
+    {
+      "id": 11,
+      "title": "WebAssembly и будущее веба",
+      "content": "Исследование возможностей WebAssembly, практические примеры использования и перспективы развития.",
+      "category": "Frontend",
+      "author": "Александр Иванов",
+      "publishDate": "2024-06-15"
+    },
+    {
+      "id": 12,
+      "title": "CSS анимации и производительность",
+      "content": "Оптимизация производительности CSS-анимаций. Работа с transform, opacity и композитными слоями.",
+      "category": "CSS",
+      "author": "Мария Петрова",
+      "publishDate": "2024-07-01"
+    },
+    {
+      "id": 13,
+      "title": "State Management в 2024",
+      "content": "Обзор современных подходов к управлению состоянием в веб-приложениях. Redux, MobX, Recoil и другие решения.",
+      "category": "Frontend",
+      "author": "Дмитрий Сидоров",
+      "publishDate": "2024-07-15"
+    },
+    {
+      "id": 14,
+      "title": "MongoDB vs PostgreSQL",
+      "content": "Сравнительный анализ MongoDB и PostgreSQL. Когда использовать NoSQL, а когда реляционные базы данны.",
+      "category": "Backend",
+      "author": "Елена Козлова",
+      "publishDate": "2024-08-01"
+    },
+    {
+      "id": 15,
+      "title": "Kubernetes на продакшене",
+      "content": "Реальный опыт использования Kubernetes в производственной среде. Проблемы, решения и лучшие практики.",
+      "category": "DevOps",
+      "author": "Павел Волков",
+      "publishDate": "2024-08-15"
+    },
+    {
+      "id": 16,
+      "title": "Progressive Web Apps",
+      "content": "Создание прогрессивных веб-приложений. Service Workers, кэширование, push-уведомления.",
+      "category": "Frontend",
+      "author": "Александр Иванов",
+      "publishDate": "2024-09-01"
+    },
+    {
+      "id": 17,
+      "title": "CSS Custom Properties",
+      "content": "Использование пользовательских свойств CSS. Динамические темы, responsive design и организация кода.",
+      "category": "CSS",
+      "author": "Мария Петрова",
+      "publishDate": "2024-09-15"
+    },
+    {
+      "id": 18,
+      "title": "Event Sourcing паттерн",
+      "content": "Применение Event Sourcing в современных приложениях. CQRS, проекции и обработка событий.",
+      "category": "Backend",
+      "author": "Дмитрий Сидоров",
+      "publishDate": "2024-10-01"
+    },
+    {
+      "id": 19,
+      "title": "Web Components",
+      "content": "Создание переиспользуемых веб-компонентов. Shadow DOM, Custom Elements и HTML Templates.",
+      "category": "Frontend",
+      "author": "Елена Козлова",
+      "publishDate": "2024-10-15"
+    },
+    {
+      "id": 20,
+      "title": "CI/CD пайплайны",
+      "content": "Построение эффективных CI/CD пайплайнов. GitHub Actions, Jenkins и автоматизация деплоя.",
+      "category": "DevOps",
+      "author": "Павел Волков",
+      "publishDate": "2024-11-01"
+    },
+    {
+      "id": 21,
+      "title": "WebRTC технологии",
+      "content": "Реализация видеочатов и стриминга с WebRTC. Сигнальные серверы, STUN/TURN и медиапотоки.",
+      "category": "Frontend",
+      "author": "Александр Иванов",
+      "publishDate": "2024-11-15"
+    },
+    {
+      "id": 22,
+      "title": "CSS Container Queries",
+      "content": "Новый подход к отзывчивому дизайну с Container Queries. Практические примеры и применение.",
+      "category": "CSS",
+      "author": "Мария Петрова",
+      "publishDate": "2024-12-01"
+    },
+    {
+      "id": 23,
+      "title": "gRPC в микросервисах",
+      "content": "Использование gRPC для коммуникации между микросервисами. Протоколы, буферы и производительность.",
+      "category": "Backend",
+      "author": "Дмитрий Сидоров",
+      "publishDate": "2024-12-15"
+    },
+    {
+      "id": 24,
+      "title": "Тестирование React приложений",
+      "content": "Стратегии тестирования React приложений. Jest, React Testing Library и end-to-end тесты.",
+      "category": "Frontend",
+      "author": "Елена Козлова",
+      "publishDate": "2025-01-01"
+    },
+    {
+      "id": 25,
+      "title": "Terraform и Infrastructure as Code",
+      "content": "Управление инфраструктурой с помощью Terraform. Модули, состояния и автоматизация.",
+      "category": "DevOps",
+      "author": "Павел Волков",
+      "publishDate": "2025-01-15"
+    },
+    {
+      "id": 26,
+      "title": "Web Authentication API",
+      "content": "Реализация современной аутентификации с Web Authentication API. Биометрия и ключи безопасности.",
+      "category": "Frontend",
+      "author": "Александр Иванов",
+      "publishDate": "2025-02-01"
+    },
+    {
+      "id": 27,
+      "title": "CSS Houdini API",
+      "content": "Расширение возможностей CSS с помощью Houdini API. Кастомные свойства и алгоритмы компоновки.",
+      "category": "CSS",
+      "author": "Мария Петрова",
+      "publishDate": "2025-02-15"
+    },
+    {
+      "id": 28,
+      "title": "Redis в высоконагруженных системах",
+      "content": "Оптимизация производительности с Redis. Кэширование, очереди и распределенные блокировки.",
+      "category": "Backend",
+      "author": "Дмитрий Сидоров",
+      "publishDate": "2025-03-01"
+    },
+    {
+      "id": 29,
+      "title": "Server Components в React",
+      "content": "Новый подход к рендерингу с React Server Components. Оптимизация и архитектурные решения.",
+      "category": "Frontend",
+      "author": "Елена Козлова",
+      "publishDate": "2025-03-15"
+    },
+    {
+      "id": 30,
+      "title": "Service Mesh в Kubernetes",
+      "content": "Внедрение Service Mesh в Kubernetes-кластер. Istio, безопасность и мониторинг.",
+      "category": "DevOps",
+      "author": "Павел Волков",
+      "publishDate": "2025-04-01"
+    }
+  ],
+  "categories": ["Frontend", "CSS", "JavaScript", "Backend", "DevOps"],
+  "authors": [
+    "Александр Иванов",
+    "Мария Петрова",
+    "Дмитрий Сидоров",
+    "Елена Козлова",
+    "Павел Волков"
+  ]
+}

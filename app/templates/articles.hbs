@@ -1,0 +1,23 @@
+<div class="container mx-auto px-4 py-8">
+  {{#if (eq this.router.currentRouteName "articles.index")}}
+    <SearchFilter
+      @categories={{@model.categories}}
+      @authors={{@model.authors}}
+      @onFilter={{this.updateFilters}}
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{#each this.filteredArticles as |article|}}
+        <ArticleCard @article={{article}} />
+      {{else}}
+        <p class="col-span-full text-center text-gray-600 dark:text-gray-400">
+          Статьи не найдены
+        </p>
+      {{/each}}
+    </div>
+
+    <div {{intersection-observer this.loadMore}} class="h-10 w-full"></div>
+  {{/if}}
+
+  {{outlet}}
+</div>

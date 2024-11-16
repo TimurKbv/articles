@@ -1,0 +1,60 @@
+<div 
+  class="custom-select-container relative w-full"
+  {{did-insert this.setupClickOutside}}
+>
+  <button
+    type="button"
+    class="w-full bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm 
+           border border-gray-200 dark:border-gray-600 rounded-md pl-3 pr-10 py-2 
+           text-left transition duration-300 ease-in-out
+           focus:outline-none focus:border-blue-400 dark:focus:border-blue-500 
+           hover:border-gray-300 dark:hover:border-gray-500
+           shadow-sm focus:shadow"
+    {{on "click" this.toggleDropdown}}
+  >
+    <span class="block truncate">
+      {{this.selectedLabel}}
+    </span>
+    <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+      <svg class="h-4 w-4 text-gray-400 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+  </button>
+
+  {{#if this.isOpen}}
+    <div 
+      class="absolute z-10 mt-1 w-full bg-white dark:bg-gray-700 shadow-lg rounded-md 
+             border border-gray-200 dark:border-gray-600 py-1 max-h-60 overflow-auto"
+    >
+      {{#if @includeEmpty}}
+        <div
+          class="relative py-2 pl-3 pr-9 text-gray-900 dark:text-white cursor-pointer
+                 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-150"
+          role="option"
+          {{on "click" (fn this.selectOption "")}}
+        >
+          {{@placeholder}}
+        </div>
+      {{/if}}
+      {{#each @options as |option|}}
+        <div
+          class="relative py-2 pl-3 pr-9 text-gray-900 dark:text-white cursor-pointer
+                 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-150
+                 {{if (eq this.selectedOption option) 'bg-blue-50 dark:bg-blue-900'}}"
+          role="option"
+          {{on "click" (fn this.selectOption option)}}
+        >
+          {{option}}
+          {{#if (eq this.selectedOption option)}}
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-blue-600 dark:text-blue-400">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

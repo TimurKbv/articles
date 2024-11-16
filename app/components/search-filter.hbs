@@ -1,0 +1,104 @@
+<div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow mb-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    {{! Поиск }}
+    <div class="space-y-2">
+      <label
+        for="search"
+        class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+      >
+        Поиск
+      </label>
+      <input
+        type="text"
+        id="search"
+        class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+        placeholder="Поиск по заголовку или содержанию"
+        value={{this.searchQuery}}
+        {{on "input" this.updateSearch}}
+      />
+    </div>
+
+    {{! Категории }}
+    <div class="space-y-2">
+      <label
+        for="category"
+        class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+      >
+        Категория
+      </label>
+      <select
+        id="category"
+        class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded px-5 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+        {{on "change" this.updateCategory}}
+      >
+        <option value="">Все категории</option>
+        {{#each this.categories as |category|}}
+          <option
+            value={{category}}
+            selected={{eq this.selectedCategory category}}
+          >
+            {{category}}
+          </option>
+        {{/each}}
+      </select>
+    </div>
+
+    {{! Авторы }}
+    <div class="flex flex-col justify-between gap-y-2">
+      <label
+        for="author"
+        class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+      >
+        Автор
+      </label>
+      <select
+        id="author"
+        class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded px-5 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+        {{on "change" this.updateAuthor}}
+      >
+        <option value="">Все авторы</option>
+        {{#each this.authors as |author|}}
+          <option value={{author}} selected={{eq this.selectedAuthor author}}>
+            {{author}}
+          </option>
+        {{/each}}
+      </select>
+    </div>
+
+    {{! Даты }}
+    <div>
+      <div class="grid grid-cols-2 gap-2">
+        <div class="space-y-2">
+          <label
+            for="startDate"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
+            От
+          </label>
+          <input
+            type="date"
+            id="startDate"
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            value={{this.startDate}}
+            {{on "change" this.updateStartDate}}
+          />
+        </div>
+        <div class="space-y-2">
+          <label
+            for="endDate"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
+            До
+          </label>
+          <input
+            type="date"
+            id="endDate"
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            value={{this.endDate}}
+            {{on "change" this.updateEndDate}}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
