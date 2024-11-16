@@ -47,11 +47,6 @@ docker run -p 80:80 article-manager
 
 3. Откройте http://localhost
 
-## Тестирование
-
-```bash
-ember test
-```
 
 ## Дополнительная информация
 
